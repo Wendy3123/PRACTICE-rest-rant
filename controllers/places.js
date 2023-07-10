@@ -1,7 +1,21 @@
 const router = require('express').Router()
 
 router.get('/',(req,res)=>{
-    res.send('GET/places page')
+    let places = [{
+        name: 'H-Thai-ML',
+        city: 'Seattle',
+        state: 'WA',
+        cuisines: 'Thai, Pan-Asian',
+        pic: 'http://placekitten.com/250/250'
+      }, {
+        name: 'Coding Cat Cafe',
+        city: 'Phoenix',
+        state: 'AZ',
+        cuisines: 'Coffee, Bakery',
+        pic: 'http://placekitten.com/250/250'
+      }]
+      
+    res.render('places/index',{places})
 })
 
 router.post('/',(req,res)=>{
@@ -37,7 +51,7 @@ router.delete('/:id/rant/:rantId',(req,res)=>{
 })
 
 router.get('*',(req,res)=>{
-    res.status(404).send('<h1>404 Page</h1>')
+    res.render('places/error404')
 })
 
 
