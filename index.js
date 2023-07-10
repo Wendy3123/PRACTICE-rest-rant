@@ -3,6 +3,8 @@ const express = require('express')
 const app = express()            //check documentation you get module from to see if it needs to be invoked
 const PORT=process.env.PORT
 
+app.use('/places',require('./controllers/places'))
+
 app.get('/',(req,res)=>{
     res.send('Hello World!!!!')     //sends hello world to localhost:3000 
 })
