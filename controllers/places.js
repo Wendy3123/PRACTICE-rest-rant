@@ -4,4 +4,6 @@ router.get('/',(req,res)=>{
     res.send('GET/places page')
 })
 
+
+
 module.exports = router
