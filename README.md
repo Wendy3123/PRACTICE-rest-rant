@@ -57,10 +57,10 @@ Rants
 ## Planning
 
 ### User Stories
-TBD
+TBD(imagine u r a user using this website... as a user i want to see....when i click on the /places page it should show...)
 
 ### Wireframes
-TBD
+TBD(upload an img from wireframe ex)
 
 ## Notes
 
