@@ -1,0 +1,23 @@
+{
+  "name": "practice-rest-rant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wendy3123/PRACTICE-rest-rant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wendy3123/PRACTICE-rest-rant/issues"
+  },
+  "homepage": "https://github.com/Wendy3123/PRACTICE-rest-rant#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
