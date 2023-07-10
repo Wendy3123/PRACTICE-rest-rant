@@ -15,7 +15,8 @@ app.get('/',(req,res)=>{
 
 app.get('*',(req,res)=>{        //* (path) goes to any other pages that you don't have set up
     // res.send('<h1>404 PAGE</h1>')   //html content needs quotes around 
-    res.status(404).send('<h1>404 PAGE</h1>')   //.status(404) doesn't show to user page
+    // res.status(404).send('<h1>404 PAGE</h1>')   //.status(404) doesn't show to user page
+    res.render('error404') 
 })
 
 app.listen(PORT,()=>{
