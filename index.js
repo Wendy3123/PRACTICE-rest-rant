@@ -3,10 +3,14 @@ const express = require('express')
 const app = express()            //check documentation you get module from to see if it needs to be invoked
 const PORT=process.env.PORT
 
+app.set('view engine','jsx')
+app.engine('jsx',require('express-react-views').createEngine())
+
 app.use('/places',require('./controllers/places'))
 
 app.get('/',(req,res)=>{
-    res.send('Hello World!!!!')     //sends hello world to localhost:3000 
+    // res.send('Hello World!!!!')     //sends hello world to localhost:3000 
+    res.render('home')      //when using .render the argument in the quote takes the name of the file without the extension (.jsx)
 })
 
 app.get('*',(req,res)=>{        //* (path) goes to any other pages that you don't have set up
