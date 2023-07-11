@@ -6,17 +6,19 @@ router.get('/',(req,res)=>{
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: 'http://placekitten.com/250/250'
+        pic: './images/H-THAI-ML.jpg'
       }, {
         name: 'Coding Cat Cafe',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
+        pic: './images/codingcatcafe.jpg'
       }]
       
     res.render('places/index',{places})
 })
+
+
 
 router.post('/',(req,res)=>{
     res.send('POST/creates new place page')
