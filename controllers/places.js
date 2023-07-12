@@ -21,6 +21,7 @@ router.get('/',(req,res)=>{
 
 
 router.post('/',(req,res)=>{
+    console.log('msgs',req.body)
     res.send('POST/creates new place page')
 })
 
