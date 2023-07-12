@@ -1,6 +1,9 @@
 h1 {
     text-align: center;
-    color: cornflowerblue;
+    color: rgb(209, 112, 209);
+}
+body{
+    background-color: rgb(108, 225, 225);
 }
 
 
