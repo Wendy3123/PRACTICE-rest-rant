@@ -6,15 +6,21 @@ function home() {
     return (
         <Def>
             <main>
-                <h1>HOME PAGE</h1>
-                <div>
-                    <img src='/images/cake.jpg' alt='cake picture' width='300px'></img>
+                <h1>REST-Rant</h1>
+                <div class='inlinepic'>
+                    <img id='cakepichomepage' src='/images/cake.jpg' alt='cake picture' width='300px'></img>
                     <div>
                         Photo by <a href='https://unsplash.com/photos/Mzy-OjtCI70'>Anna Tukhfatullina</a> on <a href='https://unsplash.com/s/photos/food'>UNSPLASH</a>
                     </div>
                 </div>
+                <div class='inlinepic'>
+                    <img src='/images/salad.jpg' alt='salad picture' width='300px'></img>
+                    <div>
+                        Photo by <a href='https://unsplash.com/photos/kcA-c3f_3FE'>Anh Nguyen</a> on <a href='https://unsplash.com/s/photos/food'>UNSPLASH</a>
+                    </div>
+                </div>
                 <a href="/places">
-                    <button className="btn-primary">Places Page</button>
+                    <button id='viewshomepagebutton' className="btn-primary">Places/Index Page</button>
                 </a>
 
             </main>

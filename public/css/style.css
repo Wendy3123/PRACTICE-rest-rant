@@ -2,9 +2,23 @@ h1 {
     text-align: center;
     color: cornflowerblue;
 }
-  
+
 
 img {
-    height: 25em;
-    width:25em;
+    height: 20em;
+    width: 20em;
 }
+
+.inlinepic {
+    display:inline-block;
+    margin:5vh 0 5vh 9vw;
+
+}
+
+ #cakepichomepage{
+    margin-right: 10vw;
+}
+
+#viewshomepagebutton{
+    margin-left:9vw ;
+} 

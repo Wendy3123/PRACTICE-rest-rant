@@ -25,7 +25,8 @@ router.post('/',(req,res)=>{
 })
 
 router.get('/new',(req,res)=>{
-    res.send('Form page for creating a new place')
+    // res.send('Form page for creating a new place')
+    res.render('places/new')
 })
 
 router.get('/:id',(req,res)=>{
