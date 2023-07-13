@@ -9,7 +9,8 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
 
-app.use('/places',require('./controllers/places'))
+app.use('/places',require('./controllers/places'))  //connects any search to /places to the controllers/places file
+
 
 app.get('/',(req,res)=>{
     // res.send('Hello World!!!!')     //sends hello world to localhost:3000 
