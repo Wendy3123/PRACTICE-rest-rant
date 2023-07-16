@@ -98,3 +98,9 @@ nav a:hover {
     margin:0;
     color:black;
 }
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:2;
+}
