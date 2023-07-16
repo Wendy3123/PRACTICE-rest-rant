@@ -93,3 +93,8 @@ nav a:hover {
     color: pink;
     text-decoration: none;
 }
+
+.newjsx-formbox,.editjsx-formbox{
+    margin:0;
+    color:black;
+}

@@ -47,8 +47,17 @@ router.put('/:id',(req,res)=>{
     res.send('Update a particular place')
 })
 
-router.put('/:id/edit',(req,res)=>{
-    res.send('Form page for editing an existing place')
+router.get('/:id/edit',(req,res)=>{
+    let id = Number(req.params.id)
+    if(isNaN(id)){
+        res.render('error404')
+    }
+    else if(!places[id]){
+        res.render('error404')
+    }
+    else{
+        res.render('places/edit', {place : places[id],id})
+    }
 })
 
 router.delete('/:id',(req,res)=>{
@@ -56,7 +65,7 @@ router.delete('/:id',(req,res)=>{
     if(isNaN(id)){
         res.render('error404')
     }
-    else if(!places[id]){
+    else if (!places[id]){
         res.render('error404')
     }
     else{
