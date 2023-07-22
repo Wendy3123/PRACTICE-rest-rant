@@ -7,7 +7,6 @@ router.get('/',(req,res)=>{
         res.render('places/index',{places})
     })
     .catch(err =>{
-        console.log('error', err)
         res.render('error404')
     })
 })
@@ -19,7 +18,6 @@ router.post('/', (req, res) => {
         res.redirect('/places')
     })
     .catch(err =>{
-        console.log('error', err)
         res.render('error404')
     })
 })
@@ -35,7 +33,6 @@ router.get('/:id', (req, res) => {
         res.render('places/show', { place })
     })
     .catch(err => {
-        console.log('err', err)
         res.render('error404')
     })
 })
