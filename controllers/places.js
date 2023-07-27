@@ -49,7 +49,8 @@ router.get('/:id/edit',(req,res)=>{
 })
 
 router.delete('/:id',(req,res)=>{
-    
+    db.Place.findByIdAndDelete(req.params.id)
+    .then(res.status(303).redirect('/places'))
 })
 
 router.post('/:id/rant',(req,res)=>{

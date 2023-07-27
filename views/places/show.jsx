@@ -18,7 +18,8 @@ function show(data) {
                     </div>
                     <div>
                         <h2>Description</h2>
-                        <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
+                        <p>{data.place.showEstablished()}</p>
+                        <p>Serving {data.place.cuisines}</p>
                     </div>
                     <div className='showjsx-editndeletebox'>
                         <div>
