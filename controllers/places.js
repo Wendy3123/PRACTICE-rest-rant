@@ -14,11 +14,18 @@ router.get('/',(req,res)=>{
 
 router.post('/', (req, res) => {
     db.Place.create(req.body)
-    .then(()=>{
+    .then(() => {
         res.redirect('/places')
     })
-    .catch(err =>{
-        res.render('error404')
+    .catch(err => {
+        if (err && err.name == 'ValidationError') {
+            let message = 'Validation Error!'
+            // Todo: Find all validation errors
+            res.render('places/new', { message })
+        }
+        else {
+            res.render('error404')
+        }
     })
 })
   
