@@ -6,7 +6,7 @@ function home() {
     return (
         <Def>
             <main className='main-container'>
-                <h1>REST-Rant</h1>
+                <h1>Wendy's REST-Rant</h1>
                 <div className='content-container'>
                     <div className='inlinepic'>
                         <img src='/images/cake.jpg' alt='cake picture' width='300px'></img>
