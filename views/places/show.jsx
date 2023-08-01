@@ -2,6 +2,25 @@ const React = require('react')
 const Def = require('../default')
 
 function show(data) {
+    let comments = (
+        <h3 className='inactive'>
+            No comments yet!
+        </h3>
+    )
+    if (data.place.comments.length) {
+        comments = data.place.comments.map(c => {
+            return (
+                <div key={c.id} className="border">
+                    <h2 className="rant">{c.rant ? 'Rant! 😡 ' : 'Rave! 😻'}</h2>
+                    <h5>{c.content}</h5>
+                    <h3>
+                        <strong>- {c.author}</strong>
+                    </h3>
+                    <h4>Rating: {c.stars}</h4>
+                </div>
+            )
+        })
+    }
     return (
         <Def>
             <main>
@@ -23,13 +42,13 @@ function show(data) {
                     </div>
                     <div className='showjsx-editndeletebox'>
                         <div>
-                            <a href={`/places/${data.id}/edit`}>
-                            <i class="bi bi-pencil-fill"></i>
+                            <a href={`/places/${data.place.id}/edit`}>
+                                <i className="bi bi-pencil-fill"></i>
                             </a>
                         </div>
-                        <form method='POST' action={`/places/${data.id}?_method=DELETE`}>
+                        <form method='POST' action={`/places/${data.place.id}?_method=DELETE`}>
                             <button type="submit">
-                                <i class="bi bi-trash"></i>
+                                <i className="bi bi-trash"></i>
                             </button>
                         </form>
                     </div>
@@ -37,9 +56,30 @@ function show(data) {
             </div>
             <hr></hr>
             <footer>
+                <form action={`/places/${data.place.id}/comment`} method='POST'>
+                    <div className='form-group'>
+                        <label htmlFor='author'>Author: </label>
+                        <input className='form-control' id='author' name='author' required/>
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='content'>Content: </label>
+                        <textarea className='form-control' id='content' name='content' required/>
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='stars'>Star Rating: </label>
+                        <input className='form-control' id='stars' name='stars' type='range' step='0.5' max='5' min='0' required/>
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='rant'>Rant?: </label>
+                        <input className='form-control' id='rant' name='rant' type='checkbox' />
+                    </div>
+                    <button type='submit'>Add Comment</button>
+                </form>
                 <div className='showjsx-footer'>
                     <h2>Comments</h2>
-                    <p>No comments yet, be the first!</p>
+                    <div className='showjsx-comments'>
+                        {comments}
+                    </div>
                 </div>
             </footer>
         </Def>
@@ -47,3 +87,6 @@ function show(data) {
 }
 
 module.exports = show
+
+
+

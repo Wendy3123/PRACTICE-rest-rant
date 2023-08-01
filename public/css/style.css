@@ -105,4 +105,14 @@ nav{
     z-index:2;
 }
 
+.showjsx-comments{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap:20px;
+}
 
+
+.showjsx-comments > div{
+    width:20rem;
+}
