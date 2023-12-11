@@ -1,6 +1,6 @@
 # Project REST-Rant
 
-REST-RANT is an app to view photos and user review content of your favorite restaurants. This app allows users to edit or delete their review. In addition, you may add new restaurants that aern't on the app yet!
+REST-RANT is an app to view photos and user review content of your favorite restaurants. This app allows users to edit or delete their review. In addition, you may add new restaurants that aern't on the app yet! View it at https://wendysrestrant.onrender.com
 
 ## Tech Usage
 
